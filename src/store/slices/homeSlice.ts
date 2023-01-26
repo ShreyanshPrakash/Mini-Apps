@@ -34,6 +34,20 @@ const reducers = {
   },
 };
 
+/**
+ * Set the shoe's color. Use {@link Shoe#setSize} to set the shoe size.
+ *
+ * @param {string} color - The shoe's color.
+ */
+
+/**
+ * @category General Use
+ */
+
+/**
+ * @param a - the first number
+ * @param b - the second number
+ */
 export const FetchBlogs = createAsyncThunk(
   "homeslice/fetchBlogs",
   async (payload: any) => {
