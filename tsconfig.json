@@ -22,7 +22,7 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
   "typedocOptions": {
-    "entryPoints": ["src/pages/index.tsx"],
+    "entryPoints": ["src/*"],
     "out": "docs"
   }
 }

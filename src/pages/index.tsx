@@ -2,6 +2,9 @@ import Head from 'next/head'
 // import { useRouter } from 'next/router'
 // import { useEffect } from 'react';
 
+/**
+ * @category General Use
+ */
 export default function IndexComponent() {
 
   // const router = useRouter();

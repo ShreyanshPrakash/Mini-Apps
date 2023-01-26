@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "doc": "typedoc",
-    "serve": "serve ./docs -p 4200"
+    "serveDoc": "typedoc && serve ./docs -p 4200"
   },
   "dependencies": {
     "@next/font": "13.1.5",

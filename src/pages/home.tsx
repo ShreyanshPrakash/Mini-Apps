@@ -34,6 +34,23 @@ interface IBlog {
   userId: string;
 }
 
+/**
+ * Set the shoe's color. Use {@link Shoe#setSize} to set the shoe size.
+ *
+ * @param {string} color - The shoe's color.
+ * 
+ * @description - Just a React component to render H
+ */
+
+/**
+ * @category General Use
+ */
+
+/**
+ * @param a - the first number
+ * @param b - the second number
+ */
+
 const Home: FC<IHomeProps> = (props: IHomeProps) => {
   const { message, apiState, blogs } = useSelector(
     (state: AppRootState) => state.homeState
