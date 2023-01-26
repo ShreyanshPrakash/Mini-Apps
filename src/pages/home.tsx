@@ -54,7 +54,7 @@ const Home: FC<IHomeProps> = (props: IHomeProps) => {
       <p>{apiState}</p>
       <button onClick={handleFetchBlogs}>Fetch Blogs</button>
       <div className="wrapper">
-        {blogs.map((item: IBlog) => {
+        {props.blogs.map((item: IBlog) => {
           const { id, title, body, userId } = item;
 
           return (
