@@ -50,12 +50,9 @@ const reducers = {
  */
 export const FetchBlogs = createAsyncThunk(
   "homeslice/fetchBlogs",
-  async (payload: any) => {
-    const res = await fetch("http://localhost:3000/api/blog/all");
+  async (payload?: any) => {
+    const res = await fetch("/api/blog/all");
     const blogs = await res.json();
-
-    console.log(blogs);
-
     return blogs;
   }
 );
