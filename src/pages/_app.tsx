@@ -1,5 +1,6 @@
 import { Header } from "@/components";
 import { store } from "@/store";
+import { GlobalStyles } from "@/styles/globalStyles";
 import { AppProps } from "next/app";
 import { Provider } from "react-redux";
 // import { CustomHead, NavigationHeader } from "uiLibrary";
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* // <StyledAppContainer className="app"> */}
         <ThemeProvider theme={{}}>
           <Header />
-          {/* <GlobalStyle /> */}
+          <GlobalStyles />
           {/* <CustomHead /> */}
           {/* <NavigationHeader /> */}
           <Component {...pageProps} />

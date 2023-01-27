@@ -1,12 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
+import styled from "styled-components";
 // import { useRouter } from 'next/router'
 // import { useEffect } from 'react';
 
-/**
- * @category General Use
- */
-export default function IndexComponent() {
+const IndexWrapper = styled.div``;
 
+export default function IndexComponent() {
   // const router = useRouter();
 
   // useEffect(() => {
@@ -16,7 +15,6 @@ export default function IndexComponent() {
   //   })
   // }, [])
 
-
   return (
     <>
       <Head>
@@ -24,9 +22,9 @@ export default function IndexComponent() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='wrapper'>
-      </div>
-      
+      <IndexWrapper>
+        <div className="wrapper"></div>
+      </IndexWrapper>
     </>
-  )
+  );
 }
