@@ -96,8 +96,13 @@ export default Home;
 
 */
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/blog/all");
-  const blogs = await res.json();
+  let blogs: Array<Object> = [];
+  try {
+    const res = await fetch("http://localhost:3200/api/blog/all");
+    blogs = await res.json();
+  }catch(error){
+    console.log(error);
+  }
 
   return {
     props: { blogs },
