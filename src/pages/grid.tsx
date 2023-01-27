@@ -1,20 +1,29 @@
+import { GridLayout } from "@/components";
 import styled from "styled-components";
 
 
-const GridLayoutWrapper = styled.div``;
+const GridWrapper = styled.div`
+    .wrapper {
+        h1 {
+            text-align: center;
+            margin: 24px;
+        }
+    }
+`;
 
 
-const GridLayout = () => {
+const Grid = () => {
 
     return (
-        <GridLayoutWrapper>
+        <GridWrapper>
             <div className="wrapper">
-                
+                <h1>Grid layout is awesome!</h1>
+                <GridLayout />
             </div>
-        </GridLayoutWrapper>
+        </GridWrapper>
     )
 
 }
 
 
-export default GridLayout;
+export default Grid;
