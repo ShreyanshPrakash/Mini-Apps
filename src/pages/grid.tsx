@@ -1,20 +1,44 @@
+import { GridLayout } from "@/components";
+import { GetStaticProps } from "next";
 import styled from "styled-components";
 
+const GridWrapper = styled.div`
+  .wrapper {
+    h1 {
+      text-align: center;
+      margin: 24px;
+    }
+  }
+`;
 
-const GridLayoutWrapper = styled.div``;
+const Grid = (props: any) => {
+  return (
+    <GridWrapper>
+      <div className="wrapper">
+        <h1>Grid layout is awesome!</h1>
+        <GridLayout blogs={props?.blogs || []}/>
+      </div>
+    </GridWrapper>
+  );
+};
+
+export default Grid;
 
 
-const GridLayout = () => {
+export const getStaticProps: GetStaticProps = async () => {
 
-    return (
-        <GridLayoutWrapper>
-            <div className="wrapper">
-                
-            </div>
-        </GridLayoutWrapper>
-    )
+    let blogs = [];
 
+    try {
+        const res = await fetch("http://localhost:3200/api/blog/all");
+        blogs = await res.json();
+    }catch(error){
+        console.log(error);
+    }
+
+    return {
+        props: {
+            blogs,
+        }
+    }
 }
-
-
-export default GridLayout;

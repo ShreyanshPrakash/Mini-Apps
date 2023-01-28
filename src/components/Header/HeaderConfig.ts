@@ -17,4 +17,8 @@ export const navLinks = [
       href: "/flex",
       text: "Flex",
     },
+    {
+      href: "/dashboard",
+      text: "Dashboard",
+    },
   ];
