@@ -21,4 +21,8 @@ export const navLinks = [
       href: "/dashboard",
       text: "Dashboard",
     },
+    {
+      href: "/chart",
+      text: "Chart",
+    },
   ];
