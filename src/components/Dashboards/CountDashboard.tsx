@@ -16,7 +16,7 @@ export const CountDashboard: FC<ICountDashboardProps> = (
           const { title, value } = item;
 
           return (
-            <div className={`grid-item grid-item-${index}`} key={index}>
+            <div className={`grid-item grid-item-${index + 1}`} key={index}>
               {/* <p>{title}</p>
                         <p>{value}</p> */}
               <p>{index + 1}</p>
