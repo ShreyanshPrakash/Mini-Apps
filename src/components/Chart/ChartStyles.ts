@@ -10,7 +10,7 @@ export const ChartComponnentWrapper = styled.div`
 
 
         .bar-chart {
-            width: 40%;
+            width: 200px;
             height: 200px;
         }
     }

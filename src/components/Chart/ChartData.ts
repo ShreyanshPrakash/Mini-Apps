@@ -43,6 +43,11 @@ export const BarChartdata = {
       borderColor: "#4a5568",
       borderWidth: 1,
       barThickness: 8,
+      borderRadius: 48,
+      borderSkipped: false,  // bottom border, To make all side rounded
+      barPercentage: 0,
+      categoryPercentage: 0,
+      categoryWidth: 20,
     },
     {
       label: "Number of user gains",
@@ -65,34 +70,81 @@ export const BarChartdata = {
       ],
       borderWidth: 1,
       barThickness: 8,
-    },
-    {
-      label: "Number of user gains",
-      data: Data.map((item) => item.userGain * Math.random()),
-      backgroundColor: "#4a5568",
-      borderColor: "#4a5568",
-      borderWidth: 1,
-      barThickness: 8,
-      borderRadius: 24,
-      fill: false,
+      borderRadius: 48,
+      barPercentage: 0,
+      categoryPercentage: 0,
+      categoryWidth: 20,
     },
   ],
 };
 
 export const BarChartOptions: BarOptions = {
   aspectRatio: 1,
-//   indexAxis: 'y',
+  //   indexAxis: 'y',
+  //   scales: {
+  //     y: {
+  //       beginAtZero: false,
+  //     },
+  //   },
+  tension: 0.4,
   scales: {
-    y: {
-      beginAtZero: false,
+    x: {
+        grid: {
+            display: false,
+        },
+      display: false,
+      scaleLabel: {
+        display: true,
+        labelString: "Month",
+      },
+      gridLines: {
+        display: false,
+        borderDash: [2],
+        borderDashOffset: [2],
+        color: "rgba(33, 37, 41, 0.3)",
+        zeroLineColor: "rgba(33, 37, 41, 0.3)",
+        zeroLineBorderDash: [2],
+        zeroLineBorderDashOffset: [2],
+      },
     },
+    y: {
+        grid: {
+            display: false,
+        },
+      display: false,
+      scaleLabel: {
+        display: false,
+        labelString: "Value",
+      },
+      gridLines: {
+        display: true,
+        borderDash: [2],
+        drawBorder: true,
+        borderDashOffset: [2],
+        color: "rgba(33, 37, 41, 0.2)",
+        zeroLineColor: "rgba(33, 37, 41, 0.15)",
+        zeroLineBorderDash: [2],
+        zeroLineBorderDashOffset: [2],
+      },
+    },
+    // right: {
+    //     beginAtZero: true,
+    //     position: "right",
+    //     ticks: {
+    //         // count: 11,
+    //         callback: ((value, index, tick) => {
+    //             return value * 100;
+    //         })
+    //     }
+    // }
   },
   plugins: {
     legend: {
+      display: false,
       position: "top",
     },
     title: {
-      display: true,
+      display: false,
       text: "Chart.js Bar Chart",
     },
   },
