@@ -13,6 +13,8 @@ export const ChartComponent: FC<IChartComponentProps> = () => {
             type="bar"
             data={BarChartdata}
             options={BarChartOptions}
+            width="200px"
+            height="200px"
           />
         </div>
       </div>
