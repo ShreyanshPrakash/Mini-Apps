@@ -1,20 +1,23 @@
+import { TBlog } from "@/components/FlexLayout/FlexLayoutTypes";
 import { GridLayoutWrapper } from "@/components/GridLayout/GridLayoutStyles";
 import { IGridLayoutProps } from "@/components/GridLayout/GridLayoutTypes";
-import { AppDispatch, AppRootState, FetchBlogs } from "@/store";
-import { FC, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { FC } from "react";
 
-export const GridLayout: FC<IGridLayoutProps> = () => {
-  const { blogs } = useSelector((state: AppRootState) => state.homeState);
-  const dispatch = useDispatch<AppDispatch>();
-
-  useEffect(() => {
-    dispatch(FetchBlogs({}));
-  }, []);
-
+export const GridLayout: FC<IGridLayoutProps> = (props: IGridLayoutProps) => {
   return (
     <GridLayoutWrapper>
-      <div className="wrapper"></div>
+      <div className="wrapper">
+        <div className="grid-container">
+          {props?.blogs?.map((blog: TBlog, index: Number) => {
+            const { body, title, id } = blog;
+            return (
+              <div className={`grid-item grid-item-${index}`} key={id}>
+                {body.substring(0, 20000)}
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </GridLayoutWrapper>
   );
 };
