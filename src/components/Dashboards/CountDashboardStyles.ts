@@ -32,22 +32,35 @@ const getGridChildrenStyles = (data: Array<TData>): string => {
 
 export const CountDashboardWrapper = styled.div<{}>`
   .grid-container {
+    padding: 24px;
     border: 4px solid darkblue;
     height: calc(100vh - 43px);
 
     display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-gap: 24px;
+    /* grid-template-columns: repeat(4, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
 
     .grid-item {
-      background-color: darkorange;
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 2px 2px 12px -6px rgba(1, 1, 1 , 0.6);
+      /* border: 4px solid darkblue; */
 
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
       animation: cardEntrance 700ms ease-out;
       animation-fill-mode: backwards;
+
+      .grid-item-value{
+        /* font-weight: bold; */
+        font-size: 3rem;
+        margin: 16px 0px;
+        color: darkblue;
+      }
     }
   }
 

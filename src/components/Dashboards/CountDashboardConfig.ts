@@ -4,18 +4,18 @@ import { TData } from "@/components/Dashboards/DashboardsTypes";
 
 export const Data: Array<TData> = [
     {
-        title: "Relay",
-        value: 1000,
+        title: "No of Relays",
+        value: 2345,
         gridName: "one",
     },
     {
-        title: "Relay",
-        value: 1000,
+        title: "No of Users",
+        value: 25,
         gridName: "two",
     },
     {
-        title: "Relay",
-        value: 1000,
+        title: "No of Stores",
+        value: 4356,
         gridName: "three",
     },
     {
